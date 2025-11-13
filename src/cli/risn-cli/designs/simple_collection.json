@@ -1,0 +1,9 @@
+{
+  "name": "Digital Baroque Collection",
+  "mood": "Liquid Silk", 
+  "items": [
+    {"name": "Quantum Gown", "type": "evening_wear"},
+    {"name": "Neural Accessories", "type": "jewelry"},
+    {"name": "Cyber Corset", "type": "foundation"}
+  ]
+}

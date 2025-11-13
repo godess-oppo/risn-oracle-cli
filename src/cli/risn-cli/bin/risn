@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+// RISN CLI Entry Point - Store-Builder Engine v2
+// Loads .env automatically and routes to src/cli.js
+require('dotenv').config();
+require('../src/cli.js');

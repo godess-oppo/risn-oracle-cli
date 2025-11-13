@@ -1,0 +1,6 @@
+{
+  "task": "audit",
+  "prompt": "Audit the following content for safety, bias, and brand compliance: {content}. Check for: discriminatory language, toxic patterns, off-brand messaging, factual errors. Output: safe (boolean), issues (array), recommendations (array).",
+  "variables": ["content"],
+  "model": "content-moderation"
+}

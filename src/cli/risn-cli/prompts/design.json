@@ -1,0 +1,6 @@
+{
+  "task": "design",
+  "prompt": "You are a fashion design AI. Generate a modern, elegant store design concept for RISN fashion brand. Include: color palette (sophisticated, minimal), typography (clean sans-serif), layout (product-focused grid), imagery style (high-fashion editorial). Output as structured JSON with design tokens.",
+  "variables": [],
+  "model": "gpt-4"
+}

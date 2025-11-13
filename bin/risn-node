@@ -1,10 +1,28 @@
 #!/usr/bin/env node
-console.log("🔮 RISN Oracle + Node.js Fusion");
-console.log("Use './risn_oracle.sh' for poetic commands");
-console.log("Or use structured commands below:");
-console.log("");
-console.log("  ./bin/risn-node init");
-console.log("  ./bin/risn-node product create");
-console.log("  ./bin/risn-node design generate");
-console.log("");
-// Basic command routing would go here
+// RISN Node.js Bridge - Works with existing poetic CLI
+console.log("🎭 RISN Enhanced CLI");
+console.log("Bridge between poetic and structured commands\n");
+
+const command = process.argv[2];
+
+// Map to poetic commands
+const commandMap = {
+  'init': 'baptize',
+  'product': 'weave --pattern=product',
+  'design': 'manifest --output=./designs/',
+  'deploy': 'recall --trigger=deployment',
+  'audit': 'audit'
+};
+
+if (commandMap[command]) {
+  const { execSync } = require('child_process');
+  console.log(`🎨 Routing to poetic command: risn_oracle.sh ${commandMap[command]}`);
+  try {
+    execSync(`./risn_oracle.sh ${commandMap[command]}`, { stdio: 'inherit' });
+  } catch (e) {
+    console.log("❌ Poetic command failed, using fallback");
+    require('./src/cli.js');
+  }
+} else {
+  require('./src/cli.js');
+}

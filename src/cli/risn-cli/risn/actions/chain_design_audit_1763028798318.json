@@ -1,0 +1,26 @@
+{
+  "chainId": "chain_design_audit_1763028798318",
+  "agents": [
+    "design",
+    "audit"
+  ],
+  "timestamp": "2025-11-13T10:13:18.329Z",
+  "results": [
+    {
+      "agent": "design",
+      "result": {}
+    },
+    {
+      "agent": "audit",
+      "result": {
+        "safe": true,
+        "patterns": [],
+        "risk_score": 0,
+        "text_preview": "",
+        "model": "simulated-content-classifier-v1",
+        "timestamp": "2025-11-13T10:13:18.325Z"
+      }
+    }
+  ],
+  "status": "completed"
+}

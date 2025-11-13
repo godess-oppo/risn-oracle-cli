@@ -1,0 +1,6 @@
+{
+  "task": "devops",
+  "prompt": "Generate deployment plan for RISN e-commerce store. Environment: {env}. Services: {services}. Include: build steps, migration checks, health checks, rollback procedures. Output as JSON with reversible actions.",
+  "variables": ["env", "services"],
+  "model": "gpt-3.5-turbo"
+}

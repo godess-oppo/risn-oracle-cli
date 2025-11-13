@@ -1,4 +1,101 @@
-#!/usr/bin/env node
-// RISN CLI Entry Point
-// Shebang wrapper for src/cli.js
-require('../src/cli.js');
+#!/bin/bash
+set -e
+
+RISN_HOME="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+export RISN_HOME
+AUDIT_LOG="$RISN_HOME/audit/consciousness.log"
+CONFIG_FILE="$RISN_HOME/risn.fluid.config"
+ACTIONS_DIR="$RISN_HOME/actions"
+POLICY_FILE="$RISN_HOME/prompts/fluid_manifesto.json"
+
+# Consciousness initialization
+source "$RISN_HOME/src/lib/consciousness.sh"
+source "$RISN_HOME/src/lib/fluidity.sh"
+source "$RISN_HOME/src/lib/orchestrator.sh"
+source "$RISN_HOME/src/lib/memory.sh"
+source "$RISN_HOME/src/lib/plugin_ecosystem.sh"
+
+init_consciousness
+load_fluid_config
+awaken_orchestrator
+discover_plugins
+check_fluid_safety "$@"
+
+main() {
+    local command="$1"
+    shift
+    
+    case "$command" in
+        awaken)
+            source "$RISN_HOME/src/commands/awaken.sh"
+            awaken_command "$@"
+            ;;
+        weave)
+            source "$RISN_HOME/src/commands/weave.sh"
+            weave_command "$@"
+            ;;
+        express)
+            source "$RISN_HOME/src/commands/express.sh"
+            express_command "$@"
+            ;;
+        evolve)
+            source "$RISN_HOME/src/commands/evolve.sh"
+            evolve_command "$@"
+            ;;
+        remember)
+            source "$RISN_HOME/src/commands/remember.sh"
+            remember_command "$@"
+            ;;
+        orchestrate)
+            source "$RISN_HOME/src/commands/orchestrate.sh"
+            orchestrate_command "$@"
+            ;;
+        transform)
+            source "$RISN_HOME/src/commands/transform.sh"
+            transform_command "$@"
+            ;;
+        journey)
+            source "$RISN_HOME/src/commands/journey.sh"
+            journey_command "$@"
+            ;;
+        --version|-v)
+            echo "RISN Oracle CLI v2.0 - Fluid Identity Revolution"
+            ;;
+        --help|-h)
+            show_fluid_help
+            ;;
+        *)
+            log_error "Unknown expression: $command"
+            show_fluid_help
+            exit 1
+            ;;
+    esac
+}
+
+show_fluid_help() {
+    cat << EOL
+RISN Oracle v2 - Fluid Identity Revolution
+
+Where identity flows like water and fashion becomes consciousness
+
+Core Expressions:
+  awaken                   Begin your fluid identity journey
+  weave <pattern>          Create identity expressions
+  express <medium>         Materialize your evolving self
+  evolve <direction>       Guide your identity transformation
+  remember <moment>        Store identity memories
+  orchestrate <dance>      Coordinate the fluid identity dance
+  transform <aspect>       Shift identity dimensions
+  journey <path>           Navigate identity landscapes
+
+Fluid Identity Principles:
+  - Identity is a river, not a statue
+  - Expression is the language of becoming
+  - Memory weaves the tapestry of self
+  - Transformation is the only constant
+
+Run 'risn <command> --help' for deeper understanding.
+EOL
+}
+
+main "$@"

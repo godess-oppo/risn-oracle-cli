@@ -1,0 +1,27 @@
+{
+  "action": "create_product",
+  "timestamp": "2025-11-13T05:49:22.008Z",
+  "data": {
+    "title": "Test Product",
+    "description": "AI-generated fashion product",
+    "handle": "test-product",
+    "status": "draft",
+    "images": [],
+    "variants": [
+      {
+        "title": "Default",
+        "prices": [
+          {
+            "amount": 9900,
+            "currency_code": "usd"
+          }
+        ]
+      }
+    ]
+  },
+  "reversible": true,
+  "rollback": {
+    "action": "delete_product",
+    "product_id": "PENDING"
+  }
+}

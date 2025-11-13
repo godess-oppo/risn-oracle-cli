@@ -1,0 +1,10 @@
+{
+  "prompt": "cyber-silk kimono",
+  "timestamp": "20251113_123045",
+  "image": "images/20251113_123045_outfit.png",
+  "audio": "audio/20251113_123045_ambient.wav",
+  "model": "models/20251113_123045_pose.glb",
+  "sd_version": "stable-diffusion-v1.5",
+  "tts_version": "coqui-tts-0.3.0",
+  "blender_version": "3.5"
+}

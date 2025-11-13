@@ -1,0 +1,17 @@
+{
+  "task": "policy",
+  "version": "2.0",
+  "rules": [
+    "All destructive actions (deploy, product create, ops write) must be dry-run by default",
+    "Reversible action plans must be written to risn/actions/*.json before execution",
+    "Content must pass safety audit before publish unless --policy-accept override",
+    "All commands must be logged to risn/audit.log with timestamp and metadata",
+    "API keys and secrets must never be logged or exposed in plans",
+    "System heal operations must create rollback snapshots"
+  ],
+  "compliance": {
+    "data_privacy": "GDPR, CCPA compliant",
+    "content_safety": "ML-based toxicity detection",
+    "reversibility": "All actions can be rolled back within 24h"
+  }
+}

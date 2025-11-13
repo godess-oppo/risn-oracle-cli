@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+# RISN AI Commit Message Hook
+# Generates conventional commits using AI based on staged changes
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+
+# Skip if commit message already provided or merge/squash
+if [ -n "$COMMIT_SOURCE" ]; then
+  exit 0
+fi
+
+# Get staged diff
+DIFF=$(git diff --cached --stat)
+
+if [ -z "$DIFF" ]; then
+  exit 0
+fi
+
+# Get changed files
+FILES=$(git diff --cached --name-only | head -5)
+
+# TODO: Call LLM API to generate commit message
+# For now, generate conventional commit template
+
+COMMIT_TYPE="feat"
+if echo "$FILES" | grep -q "fix\|bug"; then
+  COMMIT_TYPE="fix"
+elif echo "$FILES" | grep -q "doc\|README"; then
+  COMMIT_TYPE="docs"
+elif echo "$FILES" | grep -q "test"; then
+  COMMIT_TYPE="test"
+fi
+
+cat > "$COMMIT_MSG_FILE" <<COMMITMSG
+$COMMIT_TYPE: [AI-generated - edit as needed]
+
+# Files changed:
+$(echo "$FILES" | sed 's/^/#   - /')
+
+# Conventional Commits format:
+# feat: new feature
+# fix: bug fix
+# docs: documentation
+# style: formatting
+# refactor: code restructuring
+# test: adding tests
+# chore: maintenance
+
+COMMITMSG

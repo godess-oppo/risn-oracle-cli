@@ -35,25 +35,7 @@
       "gltf": "item3.gltf",
       "audio": "item3.mp3",
       "svg": "item3.svg"
-    },
-    {
-      "sku": "item4",
-      "title": "",
-      "prompt": "",
-      "image": "item4.png",
-      "gltf": "item4.gltf",
-      "audio": "item4.mp3",
-      "svg": "item4.svg"
-    },
-    {
-      "sku": "item5",
-      "title": "",
-      "prompt": "",
-      "image": "item5.png",
-      "gltf": "item5.gltf",
-      "audio": "item5.mp3",
-      "svg": "item5.svg"
     }
   ],
-  "generated_at": "2025-11-13T04:58:13.859004Z"
+  "generated_at": "2025-11-13T06:04:44.252002Z"
 }

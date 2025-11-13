@@ -1,0 +1,6 @@
+{
+  "task": "marketing",
+  "prompt": "Create compelling marketing copy for RISN fashion product: {product_name}. Target audience: {audience}. Tone: {tone}. Focus on: quality craftsmanship, sustainable materials, timeless style. Output: product description (50 words), social media caption (280 chars), email subject line.",
+  "variables": ["product_name", "audience", "tone"],
+  "model": "gpt-4"
+}
