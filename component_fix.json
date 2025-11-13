@@ -1,0 +1,7 @@
+{
+  "action": "generate_fix",
+  "problem_type": "typescript_react_component",
+  "issue": "React component in .ts file instead of .tsx",
+  "file": "components/product/SensoryProductCard.ts",
+  "expected": "Should be .tsx for JSX components"
+}

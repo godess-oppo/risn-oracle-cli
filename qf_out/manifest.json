@@ -1,0 +1,59 @@
+{
+  "generated": [
+    {
+      "sku": "item0",
+      "title": "",
+      "prompt": "",
+      "image": "item0.png",
+      "gltf": "item0.gltf",
+      "audio": "item0.mp3",
+      "svg": "item0.svg"
+    },
+    {
+      "sku": "item1",
+      "title": "",
+      "prompt": "",
+      "image": "item1.png",
+      "gltf": "item1.gltf",
+      "audio": "item1.mp3",
+      "svg": "item1.svg"
+    },
+    {
+      "sku": "item2",
+      "title": "",
+      "prompt": "",
+      "image": "item2.png",
+      "gltf": "item2.gltf",
+      "audio": "item2.mp3",
+      "svg": "item2.svg"
+    },
+    {
+      "sku": "item3",
+      "title": "",
+      "prompt": "",
+      "image": "item3.png",
+      "gltf": "item3.gltf",
+      "audio": "item3.mp3",
+      "svg": "item3.svg"
+    },
+    {
+      "sku": "item4",
+      "title": "",
+      "prompt": "",
+      "image": "item4.png",
+      "gltf": "item4.gltf",
+      "audio": "item4.mp3",
+      "svg": "item4.svg"
+    },
+    {
+      "sku": "item5",
+      "title": "",
+      "prompt": "",
+      "image": "item5.png",
+      "gltf": "item5.gltf",
+      "audio": "item5.mp3",
+      "svg": "item5.svg"
+    }
+  ],
+  "generated_at": "2025-11-13T04:58:13.859004Z"
+}

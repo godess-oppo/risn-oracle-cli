@@ -1,7 +1,18 @@
-# RISN CLI — Reshine Brand Automation (scaffold)
-This repository contains a self-healing, autonomous CLI scaffold for RISN operations.
-Defaults are safe and offline-friendly. Replace placeholder stubs with real integrations:
-- sd-integration.js -> hook to local SD-webui
-- llm-wrapper.js -> hook to Ollama / local LLM runtime
-See prompts/ for agent templates and policy.json for safety.
-License: MIT
+# RISN CLI - Reshine Store Builder
+
+AI-powered CLI for building and managing e-commerce stores with Medusa.js backend.
+
+## Features
+
+- 🤖 **AI Agents**: Design, Marketing, DevOps automation
+- 🛡️ **Safety-First**: Dry-run by default, reversible actions
+- 🔌 **Plugin System**: Extensible architecture
+- 📊 **Analytics**: Built-in store performance tracking
+- 🔍 **Content Audit**: Automated safety checks
+- 🧠 **Memory**: SQLite-backed long-term memory
+
+## Installation
+
+```bash
+npm install
+npm link  # or add to PATH

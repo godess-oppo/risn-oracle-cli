@@ -1,0 +1,7 @@
+{
+  "problem": "Next.js undefined component error",
+  "context": "Storefront app build failing with 'Unsupported Server Component type: undefined'",
+  "symptoms": ["Build fails", "Runtime errors", "TypeScript component issues"],
+  "environment": "Next.js 14.2.33, TypeScript, React components",
+  "files_affected": ["app/layout.tsx", "app/page.tsx", "components/product/SensoryProductCard.ts"]
+}

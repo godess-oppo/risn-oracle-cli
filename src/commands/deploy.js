@@ -1,14 +1,24 @@
-/**
- * risn deploy --target vercel|docker|railway --stage staging|prod [--canary]
- */
-const fs = require('fs'), path = require('path');
-exports.run = function(argv, ctx){
-  const base = ctx.base;
-  const tIdx = argv.indexOf('--target'), sIdx = argv.indexOf('--stage');
-  const canary = argv.includes('--canary');
-  const target = tIdx!==-1?argv[tIdx+1]:'docker';
-  const stage = sIdx!==-1?argv[sIdx+1]:'staging';
-  const plan = {action:'deploy', target, stage, canary, ts:new Date().toISOString()};
-  fs.writeFileSync(path.join(base,'actions',`deploy-${stage}-${Date.now()}.json`), JSON.stringify(plan,null,2));
-  console.log('Deploy plan written. /* CONFIG - set deployment endpoints in .env */');
+// RISN Command: deploy
+// Deploy store (reversible plan, dry-run default)
+const logger = require('../lib/logger');
+const { writeReversiblePlan } = require('../lib/orchestrator');
+
+module.exports = function(argv) {
+  logger.log('deploy', { action: 'deploy', dryRun: argv['dry-run'] });
+  
+  const plan = {
+    action: 'deploy_store',
+    timestamp: new Date().toISOString(),
+    target: 'production',
+    reversible: true
+  };
+  
+  if (argv['dry-run']) {
+    writeReversiblePlan('deploy', plan);
+    console.log('[deploy] Deployment plan written. Use --policy-accept to deploy live.');
+  } else if (argv['policy-accept']) {
+    console.log('[deploy] Deploying live...');
+    // TODO: trigger CI/CD pipeline
+    logger.log('deploy', { action: 'executed', plan });
+  }
 };

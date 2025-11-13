@@ -1,6 +1,29 @@
 #!/usr/bin/env bash
-# Example prepare-commit-msg hook that appends AICM metadata if present
-COMMIT_FILE=$1
-if [ -f ".git/risn_aicm_msg" ]; then
-  cat .git/risn_aicm_msg >> "$COMMIT_FILE"
+# RISN AI Commit Message Hook
+# Generates commit message using AI based on staged changes
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+
+# Skip if commit message provided or merge/squash
+if [ -n "$COMMIT_SOURCE" ]; then
+  exit 0
 fi
+
+# Get staged diff
+DIFF=$(git diff --cached)
+
+if [ -z "$DIFF" ]; then
+  exit 0
+fi
+
+# TODO: Call LLM to generate commit message
+# For now, use a simple template
+cat > "$COMMIT_MSG_FILE" <<COMMITMSG
+# AI-generated commit message (TODO: integrate LLM)
+# 
+# Changes detected:
+# $(git diff --cached --name-only | head -5)
+#
+# Edit this message as needed
+COMMITMSG

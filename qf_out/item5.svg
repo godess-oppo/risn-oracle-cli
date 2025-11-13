@@ -1,0 +1,6 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'>
+<rect x='20' y='20' width='280' height='200' fill='rgb(215, 193, 107)' rx='20' />
+<rect x='320' y='20' width='280' height='200' fill='rgb(66, 130, 103)' rx='20' />
+<rect x='620' y='20' width='280' height='200' fill='rgb(199, 77, 121)' rx='20' />
+<rect x='920' y='20' width='280' height='200' fill='rgb(148, 231, 128)' rx='20' />
+<text x='20' y='560' font-size='28' fill='#222'></text></svg>

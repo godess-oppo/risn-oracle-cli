@@ -1,5 +1,9 @@
 {
-  "auto_publish_allowed": false,
-  "restricted_actions": ["db-drop","force-migrate","public-deploy"],
-  "require_policy_accept_env": "RISN_POLICY_ACCEPT"
+  "task": "policy",
+  "rules": [
+    "All destructive actions must be dry-run by default",
+    "Reversible plans must be written to risn/actions/*.json",
+    "Unsafe content must be blocked unless --policy-accept is used",
+    "All actions must be logged to risn/audit.log"
+  ]
 }

@@ -1,4 +1,6 @@
 {
-  "template":"Marketing Agent: write 3 email subject lines, 2 social captions, 1 short-video script, with CTAs and tags.",
-  "checks":["safety","no-spam-phrases"]
+  "task": "marketing",
+  "prompt": "Create marketing content for product: {product_name}. Target audience: {audience}. Tone: {tone}.",
+  "variables": ["product_name", "audience", "tone"],
+  "model": "gpt-4"
 }

@@ -1,4 +1,6 @@
 {
-  "template":"Audit: run bias/toxicity checks using open-source classifiers; produce short human-readable report.",
-  "tools":["detector-stub"]
+  "task": "audit",
+  "prompt": "Audit the following content for safety and compliance: {content}",
+  "variables": ["content"],
+  "model": "content-moderation"
 }

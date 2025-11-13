@@ -1,14 +1,25 @@
-/**
- * risn product create --from-design <file> --meta <json>
- * Pushes product data to store (Medusa API connector stub).
- */
-const fs = require('fs'), path = require('path');
-exports.run = function(argv, ctx){
-  const base = ctx.base;
-  const fromIdx = argv.indexOf('--from-design'), metaIdx = argv.indexOf('--meta');
-  const file = fromIdx!==-1?argv[fromIdx+1]:null;
-  const meta = metaIdx!==-1?JSON.parse(argv[metaIdx+1]||'{}'):{};
-  const act = {action:'product.create', file, meta, timestamp:new Date().toISOString()};
-  fs.writeFileSync(path.join(base,'actions',`product-create-${Date.now()}.json`), JSON.stringify(act,null,2));
-  console.log('Product create action written. /* CONFIG - set MEDUSA_ENDPOINT/API KEYS in .env */');
+// RISN Command: product
+// Create/update products (reversible plan by default)
+const logger = require('../lib/logger');
+const { writeReversiblePlan } = require('../lib/orchestrator');
+
+module.exports = function(argv) {
+  logger.log('product', { action: 'create', dryRun: argv['dry-run'] });
+  console.log('[product] Creating product (dry-run)...');
+  
+  const plan = {
+    action: 'create_product',
+    timestamp: new Date().toISOString(),
+    data: { name: 'Sample Product', sku: 'PROD-001' },
+    reversible: true
+  };
+  
+  if (argv['dry-run']) {
+    writeReversiblePlan('product', plan);
+    console.log('[product] Plan written. Use --policy-accept to execute.');
+  } else if (argv['policy-accept']) {
+    console.log('[product] Executing live action...');
+    // TODO: call Medusa API
+    logger.log('product', { action: 'executed', plan });
+  }
 };

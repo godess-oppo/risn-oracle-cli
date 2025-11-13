@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+console.log("🔮 RISN Oracle + Node.js Fusion");
+console.log("Use './risn_oracle.sh' for poetic commands");
+console.log("Or use structured commands below:");
+console.log("");
+console.log("  ./bin/risn-node init");
+console.log("  ./bin/risn-node product create");
+console.log("  ./bin/risn-node design generate");
+console.log("");
+// Basic command routing would go here

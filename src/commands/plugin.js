@@ -1,15 +1,17 @@
-/**
- * risn plugin add <git-url>
- * Installs plugin as a git-submodule-like folder.
- */
-const fs = require('fs'), path = require('path'), child = require('child_process');
-exports.run = function(argv, ctx){
-  const url = argv[0];
-  if (!url) { console.error('Usage: risn plugin add <git-url>'); return; }
-  const name = url.split('/').pop().replace('.git','');
-  const dest = path.join(ctx.base,'plugins',name);
-  fs.mkdirSync(dest,{recursive:true});
-  fs.writeFileSync(path.join(dest,'README.md'), `Plugin stub for ${url}\n/* TODO: implement plugin */`);
-  fs.writeFileSync(path.join(ctx.base,'actions',`plugin-add-${name}.json`), JSON.stringify({url,dest,ts:new Date().toISOString()},null,2));
-  console.log('Installed plugin stub at', dest);
+// RISN Command: plugin
+// List and register plugins
+const logger = require('../lib/logger');
+const pluginRegistry = require('../lib/plugin-registry');
+
+module.exports = function(argv) {
+  const subCmd = argv._[1] || 'list';
+  logger.log('plugin', { action: subCmd });
+  
+  if (subCmd === 'list') {
+    const plugins = pluginRegistry.listPlugins();
+    console.log('[plugin] Registered plugins:', plugins);
+  } else if (subCmd === 'register') {
+    pluginRegistry.registerAll();
+    console.log('[plugin] Plugins re-scanned and registered.');
+  }
 };

@@ -1,4 +1,6 @@
 {
-  "template":"DevOps Agent: assess service health, propose safe remediation with reversible steps, prefer restart over delete.",
-  "checks":["safe-rollback","no-destructive-auto"]
+  "task": "devops",
+  "prompt": "Generate deployment plan for store. Environment: {env}. Services: {services}.",
+  "variables": ["env", "services"],
+  "model": "gpt-3.5-turbo"
 }
