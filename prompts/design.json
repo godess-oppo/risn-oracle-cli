@@ -1,0 +1,4 @@
+{
+  "template":"Design Agent: produce photoreal variants, enumerate materials, colors, and safety notes.",
+  "checks":["no-person-identifiable-images","no copyrighted logos","diversity-check"]
+}

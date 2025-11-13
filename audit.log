@@ -1,0 +1,432 @@
+[INFO] Creating RISN Oracle CLI directories...
+[INFO] Installing Python3, Node.js, Git, curl, jq, ffmpeg...
+{"time":"2025-11-12T20:21:53Z","level":"INFO","msg":"RISN CLI setup starting (AUTO=false DRY_RUN=false)..."}
+{"time":"2025-11-12T20:21:53Z","level":"INFO","msg":"Installing minimal OS packages (python3, git, curl, jq, ffmpeg)..."}
+{"time":"2025-11-12T20:21:53Z","level":"INFO","msg":"Creating Python virtualenv at /root/risn-cli/venv..."}
+{"time":"2025-11-12T20:45:16Z","level":"INFO","msg":"RISN CLI setup starting (AUTO=false DRY_RUN=false)..."}
+{"time":"2025-11-12T20:45:16Z","level":"INFO","msg":"Installing minimal OS packages (python3, git, curl, jq, ffmpeg)..."}
+{"time":"2025-11-12T20:45:16Z","level":"INFO","msg":"Creating Python virtualenv at /root/risn-cli/venv..."}
+{"time":"2025-11-12T20:48:45Z","level":"INFO","msg":"RISN CLI setup starting (AUTO=false DRY_RUN=false)..."}
+{"time":"2025-11-12T20:48:45Z","level":"INFO","msg":"Installing minimal OS packages (python3, git, curl, jq, ffmpeg)..."}
+{"time":"2025-11-12T20:48:45Z","level":"INFO","msg":"Creating Python virtualenv at /root/risn-cli/venv..."}
+{"time":"2025-11-12T20:48:53Z","level":"INFO","msg":"RISN CLI setup starting (AUTO=false DRY_RUN=false)..."}
+{"time":"2025-11-12T20:48:53Z","level":"INFO","msg":"Installing minimal OS packages (python3, git, curl, jq, ffmpeg)..."}
+{"time":"2025-11-12T20:48:54Z","level":"INFO","msg":"Creating Python virtualenv at /root/risn-cli/venv..."}
+{"time":"2025-11-12T21:09:51Z","level":"INFO","msg":"RISN CLI setup starting (AUTO=false DRY_RUN=false)..."}
+{"time":"2025-11-12T21:09:51Z","level":"INFO","msg":"Installing minimal OS packages (python3, git, curl, jq, ffmpeg)..."}
+{"time":"2025-11-12T21:09:51Z","level":"INFO","msg":"Creating Python virtualenv at /root/risn-cli/venv..."}
+{"time":"2025-11-12T21:15:03Z","level":"INFO","msg":"Writing .env.template (RBAC placeholders, tokens)..."}
+{"time":"2025-11-12T21:15:03Z","level":"INFO","msg":"Creating CLI wrapper /root/risn-cli/bin/risn"}
+{"time":"2025-11-12T21:15:03Z","level":"INFO","msg":"CLI wrapper created."}
+{"time":"2025-11-12T21:15:03Z","level":"INFO","msg":"Writing agent modules to /root/risn-cli/agents"}
+{"time":"2025-11-12T21:15:04Z","level":"INFO","msg":"Agents and orchestrator written."}
+{"time":"2025-11-12T21:15:04Z","level":"INFO","msg":"Creating convenience PATH helper and README"}
+{"time":"2025-11-12T21:15:04Z","level":"INFO","msg":"Finalizing installation..."}
+{"time":"2025-11-12T21:15:04Z","level":"INFO","msg":"Installation done. Start the orchestrator with: /root/risn-cli/bin/risn daemon start"}
+{"time":"2025-11-12T21:15:04Z","level":"INFO","msg":"RISN CLI available at: /root/risn-cli/bin/risn"}
+{"time":"2025-11-12T21:15:04Z","level":"INFO","msg":"Actions dir: /root/risn-cli/actions"}
+{"time":"2025-11-12T21:15:04Z","level":"INFO","msg":"Audit log: /root/risn-cli/audit.log"}
+{"time":"2025-11-12T21:15:04Z","level":"INFO","msg":"Quick test (dry-run): generate design (dry-run)"}
+{"time": 1762982104.8207254, "agent": "design", "msg": "design agent started preset=default product=welcome-test variants=1"}
+{"time": 1762982106.0673804, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78202a4050>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762982106.0747561, "agent": "design", "msg": "wrote design /root/risn-cli/designs/welcome-test-default-0.png"}
+{"time": 1762982106.0777535, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762982106-design:welcome-test-default-0.png.json"}
+{"time":"2025-11-12T21:15:06Z","level":"INFO","msg":"Setup finished."}
+{"time":"2025-11-12T22:05:32Z","msg":"init called, connect="}
+{"time":"2025-11-12T22:05:32Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T220532Z-init.json"}
+{"time":"2025-11-12T22:05:32Z","msg":"No store detected; writing scaffolding connector to $RISN_HOME/store-connector.json"}
+{"time":"2025-11-12T22:06:00Z","msg":"init called, connect="}
+{"time":"2025-11-12T22:06:01Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T220600Z-init.json"}
+{"time":"2025-11-12T22:06:01Z","msg":"No store detected; writing scaffolding connector to $RISN_HOME/store-connector.json"}
+{"time":"2025-11-12T22:06:13Z","msg":"Running audit checks..."}
+{"time": 1762985173.5512462, "agent": "audit", "msg": "audit agent: running basic checks"}
+{"time": 1762985173.56176, "agent": "audit", "msg": "wrote audit report /root/risn-cli/actions/audit-report-1762985173.json"}
+{"time":"2025-11-12T22:07:08Z","msg":"init called, connect=."}
+{"time":"2025-11-12T22:07:09Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T220708Z-init.json"}
+{"time":"2025-11-12T22:07:09Z","msg":"No store detected; writing scaffolding connector to $RISN_HOME/store-connector.json"}
+{"time":"2025-11-12T22:07:42Z","msg":"Design generate preset=minimalist product=test-shirt variants=2 audit=false"}
+{"time":"2025-11-12T22:07:43Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T220742Z-design.generate.json"}
+{"time":"2025-11-12T22:07:43Z","msg":"Dry-run: design.generate simulated"}
+{"time":"2025-11-12T22:07:50Z","msg":"Ops heal auto=false"}
+{"time":"2025-11-12T22:07:50Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T220750Z-ops.heal.json"}
+{"time":"2025-11-12T22:07:50Z","msg":"Dry-run: ops.heal simulated"}
+{"time":"2025-11-12T22:07:56Z","msg":"Design generate preset=summer product=t-shirt-cotton variants=3 audit=true"}
+{"time":"2025-11-12T22:07:56Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T220756Z-design.generate.json"}
+{"time": 1762985276.9872227, "agent": "design", "msg": "design agent started preset=summer product=t-shirt-cotton variants=3"}
+{"time": 1762985278.0225616, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x747b144050>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762985278.0250385, "agent": "design", "msg": "wrote design /root/risn-cli/designs/t-shirt-cotton-summer-0.png"}
+{"time": 1762985278.0279644, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762985278-design:t-shirt-cotton-summer-0.png.json"}
+{"time": 1762985278.6430123, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x747b13d1d0>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762985278.645252, "agent": "design", "msg": "wrote design /root/risn-cli/designs/t-shirt-cotton-summer-1.png"}
+{"time": 1762985278.647947, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762985278-design:t-shirt-cotton-summer-1.png.json"}
+{"time": 1762985279.5999005, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x747b13da90>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762985279.6021905, "agent": "design", "msg": "wrote design /root/risn-cli/designs/t-shirt-cotton-summer-2.png"}
+{"time": 1762985279.6045558, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762985279-design:t-shirt-cotton-summer-2.png.json"}
+{"time":"2025-11-12T22:08:00Z","msg":"Product create from=./data/designs/*.json meta={"category": "clothing"}"}
+{"time":"2025-11-12T22:08:06Z","msg":"Marketing campaign type=social product=t-shirt-cotton"}
+{"time":"2025-11-12T22:08:06Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T220806Z-marketing.campaign.json"}
+{"time":"2025-11-12T22:08:06Z","msg":"Dry-run: marketing.campaign simulated"}
+{"time":"2025-11-12T22:08:31Z","msg":"init called, connect=/path/to/your/store"}
+{"time":"2025-11-12T22:08:31Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T220831Z-init.json"}
+{"time":"2025-11-12T22:08:31Z","msg":"No store detected; writing scaffolding connector to $RISN_HOME/store-connector.json"}
+{"time":"2025-11-12T22:08:31Z","msg":"Ops heal auto=true"}
+{"time":"2025-11-12T22:08:31Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T220831Z-ops.heal.json"}
+{"time": 1762985312.031993, "agent": "ops", "msg": "ops agent started"}
+{"time": 1762985312.033733, "agent": "ops", "msg": "diagnosed issue=ok"}
+{"time": 1762985312.0352252, "agent": "ops", "msg": "remediation attempted ok=True action=no_action"}
+{"time": 1762985312.038187, "agent": "ops", "msg": "wrote plan /root/risn-cli/actions/plan-1762985312-ops.remediation.json"}
+{"time":"2025-11-12T22:08:32Z","msg":"Analytics run forecast_days=30"}
+{"time":"2025-11-12T22:08:32Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T220832Z-analytics.run.json"}
+{"time": 1762985312.7876103, "agent": "analytics", "msg": "analytics started forecast=30"}
+{"time": 1762985312.7967079, "agent": "analytics", "msg": "forecast generated drift=False delta=0.03457041179461111"}
+{"time":"2025-11-12T22:09:21Z","msg":"Design generate preset=minimalist product=hydrogen-test variants=1 audit=false"}
+{"time":"2025-11-12T22:09:21Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T220921Z-design.generate.json"}
+{"time":"2025-11-12T22:09:21Z","msg":"Dry-run: design.generate simulated"}
+{"time":"2025-11-12T22:09:22Z","msg":"Design generate preset=minimalist product=hydrogen-test variants=1 audit=true"}
+{"time":"2025-11-12T22:09:22Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T220922Z-design.generate.json"}
+{"time": 1762985362.6441689, "agent": "design", "msg": "design agent started preset=minimalist product=hydrogen-test variants=1"}
+{"time": 1762985363.5446193, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77dc0d4050>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762985363.5476239, "agent": "design", "msg": "wrote design /root/risn-cli/designs/hydrogen-test-minimalist-0.png"}
+{"time": 1762985363.5505197, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762985363-design:hydrogen-test-minimalist-0.png.json"}
+{"time":"2025-11-12T22:10:16Z","msg":"Design generate preset=minimalist product=fixed-test variants=2 audit=true"}
+{"time":"2025-11-12T22:10:16Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T221016Z-design.generate.json"}
+{"time": 1762985417.2060537, "agent": "design", "msg": "design agent started preset=minimalist product=fixed-test variants=2"}
+{"time": 1762985418.1093397, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a4e724050>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762985418.111944, "agent": "design", "msg": "wrote design /root/risn-cli/designs/fixed-test-minimalist-0.png"}
+{"time": 1762985418.1149054, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762985418-design:fixed-test-minimalist-0.png.json"}
+{"time": 1762985418.9229202, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a4e71d1d0>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762985418.9255743, "agent": "design", "msg": "wrote design /root/risn-cli/designs/fixed-test-minimalist-1.png"}
+{"time": 1762985418.9282699, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762985418-design:fixed-test-minimalist-1.png.json"}
+{"time":"2025-11-12T22:10:25Z","msg":"Product create from=./designs/fixed-test-minimalist-0.png meta={"category": "clothing"}"}
+{"time":"2025-11-12T22:10:27Z","msg":"Product create from=./designs/fixed-test-minimalist-0.png meta={"category": "clothing"}"}
+{"time":"2025-11-12T22:11:54Z","msg":"Marketing campaign type=social product=working-test-1"}
+{"time":"2025-11-12T22:11:54Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T221154Z-marketing.campaign.json"}
+{"time":"2025-11-12T22:11:54Z","msg":"Dry-run: marketing.campaign simulated"}
+{"time":"2025-11-12T22:14:11Z","msg":"Adding plugin https://github.com/risn-fashion/risn-plugin-analytics"}
+{"time":"2025-11-12T22:17:29Z","msg":"Marketing campaign type=social product=hydrogen-test-minimalist-0"}
+{"time":"2025-11-12T22:17:29Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T221729Z-marketing.campaign.json"}
+{"time":"2025-11-12T22:17:29Z","msg":"Dry-run: marketing.campaign simulated"}
+{"time":"2025-11-12T22:17:29Z","msg":"Marketing campaign type=email product=t-shirt-cotton-summer-0"}
+{"time":"2025-11-12T22:17:30Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T221729Z-marketing.campaign.json"}
+{"time":"2025-11-12T22:17:30Z","msg":"Dry-run: marketing.campaign simulated"}
+{"time":"2025-11-12T22:17:30Z","msg":"Deploy target=vercel stage=prod canary=false"}
+{"time":"2025-11-12T22:17:30Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T221730Z-deploy.json"}
+{"time":"2025-11-12T22:17:30Z","msg":"Dry-run: deploy simulated"}
+{"time":"2025-11-12T22:19:54Z","msg":"Design generate preset=summer product=api-test variants=2 audit=true"}
+{"time":"2025-11-12T22:19:54Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T221954Z-design.generate.json"}
+{"time": 1762985995.2905982, "agent": "design", "msg": "design agent started preset=summer product=api-test variants=2"}
+{"time": 1762985996.3933566, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7aa7624050>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762985996.3956108, "agent": "design", "msg": "wrote design /root/risn-cli/designs/api-test-summer-0.png"}
+{"time": 1762985996.3982506, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762985996-design:api-test-summer-0.png.json"}
+{"time": 1762985996.931752, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7aa761d1d0>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762985996.9345536, "agent": "design", "msg": "wrote design /root/risn-cli/designs/api-test-summer-1.png"}
+{"time": 1762985996.9371111, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762985996-design:api-test-summer-1.png.json"}
+{"time":"2025-11-12T22:19:57Z","msg":"Ops heal auto=true"}
+{"time":"2025-11-12T22:19:57Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T221957Z-ops.heal.json"}
+{"time": 1762985998.2334945, "agent": "ops", "msg": "ops agent started"}
+{"time": 1762985998.234868, "agent": "ops", "msg": "diagnosed issue=db_conn"}
+{"time": 1762985998.2358515, "agent": "ops", "msg": "remediation attempted ok=True action=restart_db_connector"}
+{"time": 1762985998.2388341, "agent": "ops", "msg": "wrote plan /root/risn-cli/actions/plan-1762985998-ops.remediation.json"}
+{"time":"2025-11-12T22:19:58Z","msg":"Analytics run forecast_days=7"}
+{"time":"2025-11-12T22:19:58Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T221958Z-analytics.run.json"}
+{"time": 1762985998.9442503, "agent": "analytics", "msg": "analytics started forecast=7"}
+{"time": 1762985998.9476767, "agent": "analytics", "msg": "forecast generated drift=False delta=-0.14217929164548393"}
+{"time":"2025-11-12T22:23:13Z","msg":"Design generate preset=luxury product=gemini-luxury variants=2 audit=true"}
+{"time":"2025-11-12T22:23:14Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T222313Z-design.generate.json"}
+{"time": 1762986194.3783016, "agent": "design", "msg": "design agent started preset=luxury product=gemini-luxury variants=2"}
+{"time": 1762986195.3740892, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x748eb24050>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762986195.3764732, "agent": "design", "msg": "wrote design /root/risn-cli/designs/gemini-luxury-luxury-0.png"}
+{"time": 1762986195.3795145, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762986195-design:gemini-luxury-luxury-0.png.json"}
+{"time": 1762986196.3637874, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x748eb1d1d0>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762986196.3663216, "agent": "design", "msg": "wrote design /root/risn-cli/designs/gemini-luxury-luxury-1.png"}
+{"time": 1762986196.3686898, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762986196-design:gemini-luxury-luxury-1.png.json"}
+{"time":"2025-11-12T22:23:25Z","msg":"Design generate preset=streetwear product=hf-street variants=2 audit=true"}
+{"time":"2025-11-12T22:23:25Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T222325Z-design.generate.json"}
+{"time": 1762986206.2697144, "agent": "design", "msg": "design agent started preset=streetwear product=hf-street variants=2"}
+{"time": 1762986207.1537223, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x777ac54050>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762986207.157251, "agent": "design", "msg": "wrote design /root/risn-cli/designs/hf-street-streetwear-0.png"}
+{"time": 1762986207.1601958, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762986207-design:hf-street-streetwear-0.png.json"}
+{"time": 1762986207.8047614, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x777ac4d1d0>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762986207.807422, "agent": "design", "msg": "wrote design /root/risn-cli/designs/hf-street-streetwear-1.png"}
+{"time": 1762986207.8107543, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762986207-design:hf-street-streetwear-1.png.json"}
+{"time":"2025-11-12T22:23:36Z","msg":"Design generate preset=minimalist product=chore-minimal variants=2 audit=true"}
+{"time":"2025-11-12T22:23:36Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T222336Z-design.generate.json"}
+{"time": 1762986216.618536, "agent": "design", "msg": "design agent started preset=minimalist product=chore-minimal variants=2"}
+{"time": 1762986217.519295, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7472af4050>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762986217.5216248, "agent": "design", "msg": "wrote design /root/risn-cli/designs/chore-minimal-minimalist-0.png"}
+{"time": 1762986217.524661, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762986217-design:chore-minimal-minimalist-0.png.json"}
+{"time": 1762986218.2348595, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7472aed1d0>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762986218.237067, "agent": "design", "msg": "wrote design /root/risn-cli/designs/chore-minimal-minimalist-1.png"}
+{"time": 1762986218.2395844, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762986218-design:chore-minimal-minimalist-1.png.json"}
+{"time":"2025-11-12T22:25:04Z","msg":"Ops heal auto=true"}
+{"time":"2025-11-12T22:25:04Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T222504Z-ops.heal.json"}
+{"time": 1762986304.7874327, "agent": "ops", "msg": "ops agent started"}
+{"time": 1762986304.7888186, "agent": "ops", "msg": "diagnosed issue=build_failed"}
+{"time": 1762986304.7903214, "agent": "ops", "msg": "remediation attempted ok=False action=notify_team"}
+{"time": 1762986304.7944036, "agent": "ops", "msg": "wrote plan /root/risn-cli/actions/plan-1762986304-ops.remediation.json"}
+{"time":"2025-11-12T22:26:22Z","msg":"Ops heal auto=true"}
+{"time":"2025-11-12T22:26:23Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T222622Z-ops.heal.json"}
+{"time": 1762986383.2828076, "agent": "ops", "msg": "ops agent started"}
+{"time": 1762986383.2839031, "agent": "ops", "msg": "diagnosed issue=db_conn"}
+{"time": 1762986383.2848656, "agent": "ops", "msg": "remediation attempted ok=True action=restart_db_connector"}
+{"time": 1762986383.2876797, "agent": "ops", "msg": "wrote plan /root/risn-cli/actions/plan-1762986383-ops.remediation.json"}
+{"time":"2025-11-12T22:26:43Z","msg":"Marketing campaign type=social product=system-test-dress"}
+{"time":"2025-11-12T22:26:43Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T222643Z-marketing.campaign.json"}
+{"time":"2025-11-12T22:26:43Z","msg":"Dry-run: marketing.campaign simulated"}
+{"time":"2025-11-12T22:26:43Z","msg":"Analytics run forecast_days=7"}
+{"time":"2025-11-12T22:26:44Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T222643Z-analytics.run.json"}
+{"time": 1762986404.6170158, "agent": "analytics", "msg": "analytics started forecast=7"}
+{"time": 1762986404.6365588, "agent": "analytics", "msg": "forecast generated drift=False delta=-0.005109058754175655"}
+{"time":"2025-11-12T22:40:58Z","msg":"Design generate preset=minimalist product=working-test variants=1 audit=true"}
+{"time":"2025-11-12T22:40:58Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T224058Z-design.generate.json"}
+{"time": 1762987258.9084153, "agent": "design", "msg": "design agent started preset=minimalist product=working-test variants=1"}
+{"time": 1762987260.3344064, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7853ad4050>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762987260.3372133, "agent": "design", "msg": "wrote design /root/risn-cli/designs/working-test-minimalist-0.png"}
+{"time": 1762987260.3400786, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762987260-design:working-test-minimalist-0.png.json"}
+{"time":"2025-11-12T22:41:01Z","msg":"Ops heal auto=true"}
+{"time":"2025-11-12T22:41:01Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T224101Z-ops.heal.json"}
+{"time": 1762987262.2187424, "agent": "ops", "msg": "ops agent started"}
+{"time": 1762987262.2210212, "agent": "ops", "msg": "diagnosed issue=build_failed"}
+{"time": 1762987262.2226014, "agent": "ops", "msg": "remediation attempted ok=False action=notify_team"}
+{"time": 1762987262.2303436, "agent": "ops", "msg": "wrote plan /root/risn-cli/actions/plan-1762987262-ops.remediation.json"}
+{"time":"2025-11-12T22:41:02Z","msg":"Analytics run forecast_days=7"}
+{"time":"2025-11-12T22:41:02Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T224102Z-analytics.run.json"}
+{"time": 1762987263.1764228, "agent": "analytics", "msg": "analytics started forecast=7"}
+{"time": 1762987263.1885352, "agent": "analytics", "msg": "forecast generated drift=False delta=-0.051297345660602414"}
+{"time":"2025-11-12T22:41:03Z","msg":"Marketing campaign type=social product=working-test"}
+{"time":"2025-11-12T22:41:03Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T224103Z-marketing.campaign.json"}
+{"time":"2025-11-12T22:41:03Z","msg":"Dry-run: marketing.campaign simulated"}
+{"time":"2025-11-12T22:43:13Z","msg":"init called, connect="}
+{"time":"2025-11-12T22:43:14Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T224313Z-init.json"}
+{"time":"2025-11-12T22:43:14Z","msg":"No store detected; writing scaffolding connector to $RISN_HOME/store-connector.json"}
+{"time":"2025-11-12T22:43:17Z","msg":"init called, connect="}
+{"time":"2025-11-12T22:43:17Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T224317Z-init.json"}
+{"time":"2025-11-12T22:43:17Z","msg":"No store detected; writing scaffolding connector to $RISN_HOME/store-connector.json"}
+{"time":"2025-11-12T22:43:18Z","msg":"init called, connect=."}
+{"time":"2025-11-12T22:43:18Z","msg":"Wrote plan /root/risn-cli/actions/plan-20251112T224318Z-init.json"}
+{"time":"2025-11-12T22:43:18Z","msg":"No store detected; writing scaffolding connector to $RISN_HOME/store-connector.json"}
+{"time": 1762998432.869918, "agent": "audit", "msg": "audit agent: running basic checks"}
+{"time": 1762998432.8741705, "agent": "audit", "msg": "wrote audit report /root/risn-cli/actions/audit-report-1762998432.json"}
+{"time": "2025-11-13T01:47:13.843385Z", "msg": "orchestrator starting (loop seconds=30)"}
+{"time": "2025-11-13T01:47:13.844785Z", "msg": "running agent agent_design.py args=['--preset', 'auto', '--product', 'autoprod', '--variants', '1', '--audit', 'True']"}
+{"time": 1762998434.3160493, "agent": "design", "msg": "design agent started preset=auto product=autoprod variants=1"}
+{"time": 1762998435.7693398, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71fcc74050>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762998435.7719188, "agent": "design", "msg": "wrote design /root/risn-cli/designs/autoprod-auto-0.png"}
+{"time": 1762998435.7747984, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762998435-design:autoprod-auto-0.png.json"}
+{"time": "2025-11-13T01:47:16.929626Z", "msg": "agent agent_design.py exit=0"}
+{"time": "2025-11-13T01:47:16.931455Z", "msg": "running agent agent_marketing.py args=['--type', 'social', '--product', 'autoprod']"}
+{"time": 1762998437.224837, "agent": "marketing", "msg": "marketing agent started type=social product=autoprod"}
+{"time": 1762998437.2285192, "agent": "marketing", "msg": "generated marketing asset /root/risn-cli/designs/asset-autoprod-1762998437.txt"}
+{"time": 1762998437.2321184, "agent": "marketing", "msg": "wrote plan /root/risn-cli/actions/plan-1762998437-marketing.asset.json"}
+{"time": "2025-11-13T01:47:17.295914Z", "msg": "agent agent_marketing.py exit=0"}
+{"time": "2025-11-13T01:47:17.298040Z", "msg": "running agent agent_deploy.py args=['--target', 'docker', '--stage', 'prod', '--canary', 'true']"}
+{"time": 1762998437.6339362, "agent": "deploy", "msg": "deploy agent started target=docker stage=prod canary=true"}
+{"time": 1762998437.6403441, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998437-deploy.release.json"}
+{"time": 1762998437.6570632, "agent": "deploy", "msg": "deployed canary to /root/risn-cli/deployments/canary"}
+{"time": 1762998437.6582124, "agent": "deploy", "msg": "canary health=True"}
+{"time": 1762998437.6601734, "agent": "deploy", "msg": "promoted /root/risn-cli/deployments/release-1762998437 to current (previous=None)"}
+{"time": 1762998437.6625853, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998437-deploy.promote.json"}
+{"time": "2025-11-13T01:47:17.714717Z", "msg": "agent agent_deploy.py exit=0"}
+{"time": "2025-11-13T01:47:17.715791Z", "msg": "running agent agent_analytics.py args=['--forecast', '14']"}
+{"time": 1762998438.0488608, "agent": "analytics", "msg": "analytics started forecast=14"}
+{"time": 1762998438.0510988, "agent": "analytics", "msg": "forecast generated drift=False delta=0.13793103448275856"}
+{"time": "2025-11-13T01:47:18.117243Z", "msg": "agent agent_analytics.py exit=0"}
+{"time": "2025-11-13T01:47:18.119053Z", "msg": "pipeline completed successfully"}
+{"time": "2025-11-13T01:47:48.135462Z", "msg": "running agent agent_design.py args=['--preset', 'auto', '--product', 'autoprod', '--variants', '1', '--audit', 'True']"}
+{"time": 1762998468.7201033, "agent": "design", "msg": "design agent started preset=auto product=autoprod variants=1"}
+{"time": 1762998470.5513103, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x705e5c4050>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762998470.561949, "agent": "design", "msg": "wrote design /root/risn-cli/designs/autoprod-auto-0.png"}
+{"time": 1762998470.5683467, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762998470-design:autoprod-auto-0.png.json"}
+{"time": "2025-11-13T01:47:51.813192Z", "msg": "agent agent_design.py exit=0"}
+{"time": "2025-11-13T01:47:51.814926Z", "msg": "running agent agent_marketing.py args=['--type', 'social', '--product', 'autoprod']"}
+{"time": 1762998472.0778508, "agent": "marketing", "msg": "marketing agent started type=social product=autoprod"}
+{"time": 1762998472.079875, "agent": "marketing", "msg": "generated marketing asset /root/risn-cli/designs/asset-autoprod-1762998472.txt"}
+{"time": 1762998472.0822005, "agent": "marketing", "msg": "wrote plan /root/risn-cli/actions/plan-1762998472-marketing.asset.json"}
+{"time": "2025-11-13T01:47:52.137477Z", "msg": "agent agent_marketing.py exit=0"}
+{"time": "2025-11-13T01:47:52.138994Z", "msg": "running agent agent_deploy.py args=['--target', 'docker', '--stage', 'prod', '--canary', 'true']"}
+{"time": 1762998472.534747, "agent": "deploy", "msg": "deploy agent started target=docker stage=prod canary=true"}
+{"time": 1762998472.543839, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998472-deploy.release.json"}
+{"time": 1762998472.5730884, "agent": "deploy", "msg": "deployed canary to /root/risn-cli/deployments/canary"}
+{"time": 1762998472.5744734, "agent": "deploy", "msg": "canary health=True"}
+{"time": 1762998472.5811834, "agent": "deploy", "msg": "promoted /root/risn-cli/deployments/release-1762998472 to current (previous=/root/risn-cli/deployments/release-1762998437)"}
+{"time": 1762998472.583983, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998472-deploy.promote.json"}
+{"time": "2025-11-13T01:47:52.651891Z", "msg": "agent agent_deploy.py exit=0"}
+{"time": "2025-11-13T01:47:52.653845Z", "msg": "running agent agent_analytics.py args=['--forecast', '14']"}
+{"time": 1762998473.0623565, "agent": "analytics", "msg": "analytics started forecast=14"}
+{"time": 1762998473.067793, "agent": "analytics", "msg": "forecast generated drift=False delta=0.039851626402891485"}
+{"time": "2025-11-13T01:47:53.134770Z", "msg": "agent agent_analytics.py exit=0"}
+{"time": "2025-11-13T01:47:53.137782Z", "msg": "pipeline completed successfully"}
+{"time": "2025-11-13T01:48:23.141773Z", "msg": "running agent agent_design.py args=['--preset', 'auto', '--product', 'autoprod', '--variants', '1', '--audit', 'True']"}
+{"time": 1762998503.5323386, "agent": "design", "msg": "design agent started preset=auto product=autoprod variants=1"}
+{"time": 1762998504.6954563, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x70cb894050>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762998504.6976357, "agent": "design", "msg": "wrote design /root/risn-cli/designs/autoprod-auto-0.png"}
+{"time": 1762998504.7007217, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762998504-design:autoprod-auto-0.png.json"}
+{"time": "2025-11-13T01:48:25.514718Z", "msg": "agent agent_design.py exit=0"}
+{"time": "2025-11-13T01:48:25.516641Z", "msg": "running agent agent_marketing.py args=['--type', 'social', '--product', 'autoprod']"}
+{"time": 1762998505.8561475, "agent": "marketing", "msg": "marketing agent started type=social product=autoprod"}
+{"time": 1762998505.8604379, "agent": "marketing", "msg": "generated marketing asset /root/risn-cli/designs/asset-autoprod-1762998505.txt"}
+{"time": 1762998505.8637674, "agent": "marketing", "msg": "wrote plan /root/risn-cli/actions/plan-1762998505-marketing.asset.json"}
+{"time": "2025-11-13T01:48:25.920297Z", "msg": "agent agent_marketing.py exit=0"}
+{"time": "2025-11-13T01:48:25.921869Z", "msg": "running agent agent_deploy.py args=['--target', 'docker', '--stage', 'prod', '--canary', 'true']"}
+{"time": 1762998506.2761939, "agent": "deploy", "msg": "deploy agent started target=docker stage=prod canary=true"}
+{"time": 1762998506.283218, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998506-deploy.release.json"}
+{"time": 1762998506.303283, "agent": "deploy", "msg": "deployed canary to /root/risn-cli/deployments/canary"}
+{"time": 1762998506.3050966, "agent": "deploy", "msg": "canary health=True"}
+{"time": 1762998506.3083682, "agent": "deploy", "msg": "promoted /root/risn-cli/deployments/release-1762998506 to current (previous=/root/risn-cli/deployments/release-1762998472)"}
+{"time": 1762998506.3112054, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998506-deploy.promote.json"}
+{"time": "2025-11-13T01:48:26.384794Z", "msg": "agent agent_deploy.py exit=0"}
+{"time": "2025-11-13T01:48:26.386105Z", "msg": "running agent agent_analytics.py args=['--forecast', '14']"}
+{"time": 1762998506.7622058, "agent": "analytics", "msg": "analytics started forecast=14"}
+{"time": 1762998506.7643974, "agent": "analytics", "msg": "forecast generated drift=False delta=-0.00692259282567658"}
+{"time": "2025-11-13T01:48:26.823189Z", "msg": "agent agent_analytics.py exit=0"}
+{"time": "2025-11-13T01:48:26.824546Z", "msg": "pipeline completed successfully"}
+{"time": "2025-11-13T01:48:56.826114Z", "msg": "running agent agent_design.py args=['--preset', 'auto', '--product', 'autoprod', '--variants', '1', '--audit', 'True']"}
+{"time": 1762998537.2068932, "agent": "design", "msg": "design agent started preset=auto product=autoprod variants=1"}
+{"time": 1762998538.3146799, "agent": "audit", "msg": "audit agent: running basic checks"}
+{"time": 1762998538.3197775, "agent": "audit", "msg": "wrote audit report /root/risn-cli/actions/audit-report-1762998538.json"}
+{"time": 1762998538.5946586, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d1ad34050>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762998538.5975647, "agent": "design", "msg": "wrote design /root/risn-cli/designs/autoprod-auto-0.png"}
+{"time": 1762998538.6012585, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762998538-design:autoprod-auto-0.png.json"}
+{"time": "2025-11-13T01:48:59.243571Z", "msg": "orchestrator starting (loop seconds=30)"}
+{"time": "2025-11-13T01:48:59.245026Z", "msg": "running agent agent_design.py args=['--preset', 'auto', '--product', 'autoprod', '--variants', '1', '--audit', 'True']"}
+{"time": "2025-11-13T01:48:59.366459Z", "msg": "agent agent_design.py exit=0"}
+{"time": "2025-11-13T01:48:59.368141Z", "msg": "running agent agent_marketing.py args=['--type', 'social', '--product', 'autoprod']"}
+{"time": 1762998539.6371243, "agent": "design", "msg": "design agent started preset=auto product=autoprod variants=1"}
+{"time": 1762998539.6414084, "agent": "design", "msg": "SD-WebUI unavailable or failed: No module named 'requests'"}
+{"time": 1762998539.6433754, "agent": "design", "msg": "wrote design /root/risn-cli/designs/autoprod-auto-0.png"}
+{"time": 1762998539.64631, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762998539-design:autoprod-auto-0.png.json"}
+{"time": 1762998539.7056756, "agent": "marketing", "msg": "marketing agent started type=social product=autoprod"}
+{"time": 1762998539.7085238, "agent": "marketing", "msg": "generated marketing asset /root/risn-cli/designs/asset-autoprod-1762998539.txt"}
+{"time": 1762998539.712104, "agent": "marketing", "msg": "wrote plan /root/risn-cli/actions/plan-1762998539-marketing.asset.json"}
+{"time": "2025-11-13T01:48:59.766171Z", "msg": "agent agent_marketing.py exit=0"}
+{"time": "2025-11-13T01:48:59.767585Z", "msg": "running agent agent_deploy.py args=['--target', 'docker', '--stage', 'prod', '--canary', 'true']"}
+{"time": 1762998540.1834817, "agent": "deploy", "msg": "deploy agent started target=docker stage=prod canary=true"}
+{"time": 1762998540.1940877, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998540-deploy.release.json"}
+{"time": 1762998540.2078485, "agent": "deploy", "msg": "deployed canary to /root/risn-cli/deployments/canary"}
+{"time": 1762998540.209329, "agent": "deploy", "msg": "canary health=True"}
+{"time": 1762998540.2135737, "agent": "deploy", "msg": "promoted /root/risn-cli/deployments/release-1762998540 to current (previous=/root/risn-cli/deployments/release-1762998506)"}
+{"time": 1762998540.2160883, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998540-deploy.promote.json"}
+{"time": "2025-11-13T01:49:00.277348Z", "msg": "agent agent_deploy.py exit=0"}
+{"time": "2025-11-13T01:49:00.278514Z", "msg": "running agent agent_analytics.py args=['--forecast', '14']"}
+{"time": 1762998540.6503968, "agent": "analytics", "msg": "analytics started forecast=14"}
+{"time": 1762998540.6527083, "agent": "analytics", "msg": "forecast generated drift=False delta=0.04924927862278081"}
+{"time": "2025-11-13T01:49:00.675092Z", "msg": "agent agent_design.py exit=0"}
+{"time": "2025-11-13T01:49:00.676539Z", "msg": "running agent agent_marketing.py args=['--type', 'social', '--product', 'autoprod']"}
+{"time": "2025-11-13T01:49:00.714550Z", "msg": "agent agent_analytics.py exit=0"}
+{"time": "2025-11-13T01:49:00.716019Z", "msg": "pipeline completed successfully"}
+{"time": 1762998541.0258665, "agent": "marketing", "msg": "marketing agent started type=social product=autoprod"}
+{"time": 1762998541.0280387, "agent": "marketing", "msg": "generated marketing asset /root/risn-cli/designs/asset-autoprod-1762998541.txt"}
+{"time": 1762998541.0308294, "agent": "marketing", "msg": "wrote plan /root/risn-cli/actions/plan-1762998541-marketing.asset.json"}
+{"time": "2025-11-13T01:49:01.084837Z", "msg": "agent agent_marketing.py exit=0"}
+{"time": "2025-11-13T01:49:01.086384Z", "msg": "running agent agent_deploy.py args=['--target', 'docker', '--stage', 'prod', '--canary', 'true']"}
+{"time": 1762998541.481798, "agent": "deploy", "msg": "deploy agent started target=docker stage=prod canary=true"}
+{"time": 1762998541.489922, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998541-deploy.release.json"}
+{"time": 1762998541.5078092, "agent": "deploy", "msg": "deployed canary to /root/risn-cli/deployments/canary"}
+{"time": 1762998541.5093584, "agent": "deploy", "msg": "canary health=True"}
+{"time": 1762998541.512321, "agent": "deploy", "msg": "promoted /root/risn-cli/deployments/release-1762998541 to current (previous=/root/risn-cli/deployments/release-1762998540)"}
+{"time": 1762998541.5159283, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998541-deploy.promote.json"}
+{"time": "2025-11-13T01:49:01.576136Z", "msg": "agent agent_deploy.py exit=0"}
+{"time": "2025-11-13T01:49:01.577622Z", "msg": "running agent agent_analytics.py args=['--forecast', '14']"}
+{"time": 1762998541.944422, "agent": "analytics", "msg": "analytics started forecast=14"}
+{"time": 1762998541.9469981, "agent": "analytics", "msg": "forecast generated drift=False delta=-0.07216596204896285"}
+{"time": "2025-11-13T01:49:02.005798Z", "msg": "agent agent_analytics.py exit=0"}
+{"time": "2025-11-13T01:49:02.007089Z", "msg": "pipeline completed successfully"}
+{"time": "2025-11-13T01:49:30.717662Z", "msg": "running agent agent_design.py args=['--preset', 'auto', '--product', 'autoprod', '--variants', '1', '--audit', 'True']"}
+{"time": 1762998571.9353006, "agent": "design", "msg": "design agent started preset=auto product=autoprod variants=1"}
+{"time": "2025-11-13T01:49:32.008589Z", "msg": "running agent agent_design.py args=['--preset', 'auto', '--product', 'autoprod', '--variants', '1', '--audit', 'True']"}
+{"time": 1762998572.7362967, "agent": "design", "msg": "design agent started preset=auto product=autoprod variants=1"}
+{"time": 1762998572.7415905, "agent": "design", "msg": "SD-WebUI unavailable or failed: No module named 'requests'"}
+{"time": 1762998572.7471056, "agent": "design", "msg": "wrote design /root/risn-cli/designs/autoprod-auto-0.png"}
+{"time": 1762998572.7674572, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762998572-design:autoprod-auto-0.png.json"}
+{"time": "2025-11-13T01:49:33.483129Z", "msg": "agent agent_design.py exit=0"}
+{"time": "2025-11-13T01:49:33.488163Z", "msg": "running agent agent_marketing.py args=['--type', 'social', '--product', 'autoprod']"}
+{"time": 1762998573.860266, "agent": "marketing", "msg": "marketing agent started type=social product=autoprod"}
+{"time": 1762998573.863629, "agent": "marketing", "msg": "generated marketing asset /root/risn-cli/designs/asset-autoprod-1762998573.txt"}
+{"time": 1762998573.8669066, "agent": "marketing", "msg": "wrote plan /root/risn-cli/actions/plan-1762998573-marketing.asset.json"}
+{"time": "2025-11-13T01:49:33.933396Z", "msg": "agent agent_marketing.py exit=0"}
+{"time": "2025-11-13T01:49:33.935262Z", "msg": "running agent agent_deploy.py args=['--target', 'docker', '--stage', 'prod', '--canary', 'true']"}
+{"time": 1762998574.3781102, "agent": "deploy", "msg": "deploy agent started target=docker stage=prod canary=true"}
+{"time": 1762998574.4175339, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998574-deploy.release.json"}
+{"time": 1762998574.4689126, "agent": "deploy", "msg": "deployed canary to /root/risn-cli/deployments/canary"}
+{"time": 1762998574.4709246, "agent": "deploy", "msg": "canary health=True"}
+{"time": 1762998574.4814413, "agent": "deploy", "msg": "promoted /root/risn-cli/deployments/release-1762998574 to current (previous=/root/risn-cli/deployments/release-1762998541)"}
+{"time": 1762998574.4859114, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998574-deploy.promote.json"}
+{"time": "2025-11-13T01:49:34.564917Z", "msg": "agent agent_deploy.py exit=0"}
+{"time": "2025-11-13T01:49:34.567167Z", "msg": "running agent agent_analytics.py args=['--forecast', '14']"}
+{"time": 1762998574.7337656, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79ac5e4050>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762998574.7359579, "agent": "design", "msg": "wrote design /root/risn-cli/designs/autoprod-auto-0.png"}
+{"time": 1762998574.740448, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762998574-design:autoprod-auto-0.png.json"}
+{"time": 1762998575.0182545, "agent": "analytics", "msg": "analytics started forecast=14"}
+{"time": 1762998575.0228562, "agent": "analytics", "msg": "forecast generated drift=False delta=-0.0008834381333470523"}
+{"time": "2025-11-13T01:49:35.099846Z", "msg": "agent agent_analytics.py exit=0"}
+{"time": "2025-11-13T01:49:35.101322Z", "msg": "pipeline completed successfully"}
+{"time": "2025-11-13T01:49:35.646703Z", "msg": "agent agent_design.py exit=0"}
+{"time": "2025-11-13T01:49:35.648400Z", "msg": "running agent agent_marketing.py args=['--type', 'social', '--product', 'autoprod']"}
+{"time": 1762998575.9803586, "agent": "marketing", "msg": "marketing agent started type=social product=autoprod"}
+{"time": 1762998575.9837801, "agent": "marketing", "msg": "generated marketing asset /root/risn-cli/designs/asset-autoprod-1762998575.txt"}
+{"time": 1762998575.9867685, "agent": "marketing", "msg": "wrote plan /root/risn-cli/actions/plan-1762998575-marketing.asset.json"}
+{"time": "2025-11-13T01:49:36.044125Z", "msg": "agent agent_marketing.py exit=0"}
+{"time": "2025-11-13T01:49:36.045406Z", "msg": "running agent agent_deploy.py args=['--target', 'docker', '--stage', 'prod', '--canary', 'true']"}
+{"time": 1762998576.4624784, "agent": "deploy", "msg": "deploy agent started target=docker stage=prod canary=true"}
+{"time": 1762998576.4714608, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998576-deploy.release.json"}
+{"time": 1762998576.4990137, "agent": "deploy", "msg": "deployed canary to /root/risn-cli/deployments/canary"}
+{"time": 1762998576.5007646, "agent": "deploy", "msg": "canary health=True"}
+{"time": 1762998576.5057695, "agent": "deploy", "msg": "promoted /root/risn-cli/deployments/release-1762998576 to current (previous=/root/risn-cli/deployments/release-1762998574)"}
+{"time": 1762998576.5097132, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998576-deploy.promote.json"}
+{"time": "2025-11-13T01:49:36.580889Z", "msg": "agent agent_deploy.py exit=0"}
+{"time": "2025-11-13T01:49:36.582781Z", "msg": "running agent agent_analytics.py args=['--forecast', '14']"}
+{"time": 1762998576.9953678, "agent": "analytics", "msg": "analytics started forecast=14"}
+{"time": 1762998576.997677, "agent": "analytics", "msg": "forecast generated drift=False delta=0.07941115488285296"}
+{"time": "2025-11-13T01:49:37.069084Z", "msg": "agent agent_analytics.py exit=0"}
+{"time": "2025-11-13T01:49:37.071315Z", "msg": "pipeline completed successfully"}
+{"time": "2025-11-13T01:50:05.103161Z", "msg": "running agent agent_design.py args=['--preset', 'auto', '--product', 'autoprod', '--variants', '1', '--audit', 'True']"}
+{"time": 1762998605.5418246, "agent": "design", "msg": "design agent started preset=auto product=autoprod variants=1"}
+{"time": 1762998605.5466034, "agent": "design", "msg": "SD-WebUI unavailable or failed: No module named 'requests'"}
+{"time": 1762998605.5492303, "agent": "design", "msg": "wrote design /root/risn-cli/designs/autoprod-auto-0.png"}
+{"time": 1762998605.5520875, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762998605-design:autoprod-auto-0.png.json"}
+{"time": "2025-11-13T01:50:06.226979Z", "msg": "agent agent_design.py exit=0"}
+{"time": "2025-11-13T01:50:06.228389Z", "msg": "running agent agent_marketing.py args=['--type', 'social', '--product', 'autoprod']"}
+{"time": 1762998606.5741246, "agent": "marketing", "msg": "marketing agent started type=social product=autoprod"}
+{"time": 1762998606.5768178, "agent": "marketing", "msg": "generated marketing asset /root/risn-cli/designs/asset-autoprod-1762998606.txt"}
+{"time": 1762998606.579613, "agent": "marketing", "msg": "wrote plan /root/risn-cli/actions/plan-1762998606-marketing.asset.json"}
+{"time": "2025-11-13T01:50:06.648088Z", "msg": "agent agent_marketing.py exit=0"}
+{"time": "2025-11-13T01:50:06.649472Z", "msg": "running agent agent_deploy.py args=['--target', 'docker', '--stage', 'prod', '--canary', 'true']"}
+{"time": 1762998607.0421088, "agent": "deploy", "msg": "deploy agent started target=docker stage=prod canary=true"}
+{"time": 1762998607.0510757, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998607-deploy.release.json"}
+{"time": 1762998607.073053, "agent": "deploy", "msg": "deployed canary to /root/risn-cli/deployments/canary"}
+{"time": "2025-11-13T01:50:07.073078Z", "msg": "running agent agent_design.py args=['--preset', 'auto', '--product', 'autoprod', '--variants', '1', '--audit', 'True']"}
+{"time": 1762998607.0744696, "agent": "deploy", "msg": "canary health=True"}
+{"time": 1762998607.0782666, "agent": "deploy", "msg": "promoted /root/risn-cli/deployments/release-1762998607 to current (previous=/root/risn-cli/deployments/release-1762998576)"}
+{"time": 1762998607.0821297, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998607-deploy.promote.json"}
+{"time": "2025-11-13T01:50:07.157517Z", "msg": "agent agent_deploy.py exit=0"}
+{"time": "2025-11-13T01:50:07.159584Z", "msg": "running agent agent_analytics.py args=['--forecast', '14']"}
+{"time": 1762998607.503298, "agent": "design", "msg": "design agent started preset=auto product=autoprod variants=1"}
+{"time": 1762998607.5808945, "agent": "analytics", "msg": "analytics started forecast=14"}
+{"time": 1762998607.5833097, "agent": "analytics", "msg": "forecast generated drift=False delta=0.059850250409084066"}
+{"time": "2025-11-13T01:50:07.673521Z", "msg": "agent agent_analytics.py exit=0"}
+{"time": "2025-11-13T01:50:07.675419Z", "msg": "pipeline completed successfully"}
+{"time": 1762998608.9777071, "agent": "design", "msg": "SD-WebUI unavailable or failed: HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74bc9a4050>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+{"time": 1762998608.9798605, "agent": "design", "msg": "wrote design /root/risn-cli/designs/autoprod-auto-0.png"}
+{"time": 1762998608.9834073, "agent": "design", "msg": "wrote plan /root/risn-cli/actions/plan-1762998608-design:autoprod-auto-0.png.json"}
+{"time": "2025-11-13T01:50:09.809543Z", "msg": "agent agent_design.py exit=0"}
+{"time": "2025-11-13T01:50:09.811181Z", "msg": "running agent agent_marketing.py args=['--type', 'social', '--product', 'autoprod']"}
+{"time": 1762998610.1556623, "agent": "marketing", "msg": "marketing agent started type=social product=autoprod"}
+{"time": 1762998610.1592026, "agent": "marketing", "msg": "generated marketing asset /root/risn-cli/designs/asset-autoprod-1762998610.txt"}
+{"time": 1762998610.1627173, "agent": "marketing", "msg": "wrote plan /root/risn-cli/actions/plan-1762998610-marketing.asset.json"}
+{"time": "2025-11-13T01:50:10.224797Z", "msg": "agent agent_marketing.py exit=0"}
+{"time": "2025-11-13T01:50:10.226587Z", "msg": "running agent agent_deploy.py args=['--target', 'docker', '--stage', 'prod', '--canary', 'true']"}
+{"time": 1762998610.5750365, "agent": "deploy", "msg": "deploy agent started target=docker stage=prod canary=true"}
+{"time": 1762998610.579806, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998610-deploy.release.json"}
+{"time": 1762998610.5950966, "agent": "deploy", "msg": "deployed canary to /root/risn-cli/deployments/canary"}
+{"time": 1762998610.596321, "agent": "deploy", "msg": "canary health=True"}
+{"time": 1762998610.5990765, "agent": "deploy", "msg": "promoted /root/risn-cli/deployments/release-1762998610 to current (previous=/root/risn-cli/deployments/release-1762998607)"}
+{"time": 1762998610.6018648, "agent": "deploy", "msg": "wrote plan /root/risn-cli/actions/plan-1762998610-deploy.promote.json"}
+{"time": "2025-11-13T01:50:10.659948Z", "msg": "agent agent_deploy.py exit=0"}
+{"time": "2025-11-13T01:50:10.661558Z", "msg": "running agent agent_analytics.py args=['--forecast', '14']"}
+{"time": 1762998611.0470343, "agent": "analytics", "msg": "analytics started forecast=14"}
+{"time": 1762998611.049898, "agent": "analytics", "msg": "forecast generated drift=False delta=0.031007751937984523"}
+{"time": "2025-11-13T01:50:11.099698Z", "msg": "agent agent_analytics.py exit=0"}
+{"time": "2025-11-13T01:50:11.101782Z", "msg": "pipeline completed successfully"}
+{"time": "2025-11-13T01:50:26.004625Z", "msg": "orchestrator interrupted - exiting"}
+{"time": "2025-11-13T01:50:41.103443Z", "msg": "running agent agent_design.py args=['--preset', 'auto', '--product', 'autoprod', '--variants', '1', '--audit', 'True']"}
+{"time": "2025-11-13T01:50:41.523515Z", "msg": "orchestrator interrupted - exiting"}

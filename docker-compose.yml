@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  database:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: risn
+      POSTGRES_USER: risn_user
+      POSTGRES_PASSWORD: risn_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  api:
+    image: medusa/medusa:latest
+    environment:
+      DATABASE_URL: postgresql://risn_user:risn_pass@database:5432/risn
+      REDIS_URL: redis://redis:6379
+    ports:
+      - "9000:9000"
+    depends_on:
+      - database
+      - redis
+
+volumes:
+  postgres_data:

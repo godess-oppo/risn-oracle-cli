@@ -1,0 +1,14 @@
+{
+  "product_id": "t-shirt-cotton-summer-1",
+  "name": "t shirt cotton summer 1",
+  "description": "AI-generated fashion design",
+  "price": 29.99,
+  "category": "clothing", 
+  "designs": ["designs/t-shirt-cotton-summer-1.png"],
+  "status": "active",
+  "created_at": "2025-11-12T22:17:20+00:00",
+  "metadata": {
+    "style": "generated",
+    "risn_created": true
+  }
+}

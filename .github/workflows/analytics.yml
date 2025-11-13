@@ -1,0 +1,61 @@
+name: Daily Fashion Analytics
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # 6 AM daily
+  workflow_dispatch:
+
+jobs:
+  analytics:
+    name: Run Fashion Analytics
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup RISN environment
+      run: |
+        chmod +x bin/risn
+        export PATH="$PATH:$(pwd)/bin"
+
+    - name: Run analytics
+      run: |
+        ./bin/risn analytics run --forecast 30
+        ./bin/risn ops heal --auto
+        ./bin/risn audit run --dry-run
+
+    - name: Generate analytics report
+      run: |
+        echo "# 📊 RISN Daily Analytics Report" > analytics-report.md
+        echo "**Generated:** $(date)" >> analytics-report.md
+        echo "**By:** GitHub Actions" >> analytics-report.md
+        echo "" >> analytics-report.md
+        echo "## System Status" >> analytics-report.md
+        echo "- Designs in catalog: $(find designs/ -name '*.png' 2>/dev/null | wc -l)" >> analytics-report.md
+        echo "- Products tracked: $(find data/products/ -name '*.json' 2>/dev/null | wc -l)" >> analytics-report.md
+        echo "- Last AI generation: $(find actions/ -name 'ai-design-*.json' -exec stat -c '%y' {} \; 2>/dev/null | sort -r | head -1 | cut -d' ' -f1)" >> analytics-report.md
+        echo "" >> analytics-report.md
+        echo "## Next Actions" >> analytics-report.md
+        echo "- [ ] Review new designs" >> analytics-report.md
+        echo "- [ ] Update product catalog" >> analytics-report.md
+        echo "- [ ] Plan marketing campaigns" >> analytics-report.md
+
+    - name: Upload analytics report
+      uses: actions/upload-artifact@v4
+      with:
+        name: analytics-report
+        path: analytics-report.md
+
+    - name: Create GitHub Issue with Report
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const report = require('fs').readFileSync('analytics-report.md', 'utf8');
+          await github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: `📊 RISN Analytics Report - ${new Date().toISOString().split('T')[0]}`,
+            body: report,
+            labels: ['analytics', 'automated']
+          });

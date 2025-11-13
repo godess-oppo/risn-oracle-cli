@@ -1,0 +1,15 @@
+{
+  "product_id": "hydrogen_minimalist_tee",
+  "name": "Hydrogen Minimalist Tee",
+  "description": "AI-generated minimalist t-shirt design",
+  "price": 34.99,
+  "category": "clothing",
+  "designs": ["designs/hydrogen-test-minimalist-0.png"],
+  "status": "active",
+  "created_at": "2024-01-01T00:00:00Z",
+  "metadata": {
+    "collection": "hydrogen",
+    "style": "minimalist",
+    "material": "cotton"
+  }
+}

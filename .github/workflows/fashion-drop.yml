@@ -1,0 +1,25 @@
+name: Launch Fashion Drop
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 14 * * 1'  # Every Monday at 2PM for that fresh drop energy
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Generate new collection
+        run: |
+          ./cli_chan.py batch-process drops/this-week.csv \
+            --watermark "LIMITED EDITION" \
+            --output-dir generated/
+      - name: Deploy to production
+        run: ./cli_chan.py deploy --target vercel --message "Automated drop $(date)"

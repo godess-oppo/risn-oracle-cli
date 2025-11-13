@@ -1,0 +1,14 @@
+{
+  "product_id": "fixed-test-minimalist-0",
+  "name": "fixed test minimalist 0",
+  "description": "AI-generated fashion design",
+  "price": 29.99,
+  "category": "clothing", 
+  "designs": ["designs/fixed-test-minimalist-0.png"],
+  "status": "active",
+  "created_at": "2025-11-12T22:17:19+00:00",
+  "metadata": {
+    "style": "generated",
+    "risn_created": true
+  }
+}

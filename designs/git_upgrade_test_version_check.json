@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "id": "design_1762999409",
+    "theme": "git_upgrade_test",
+    "style": "version_check",
+    "created": "2025-11-13T10:03:29.489618",
+    "version": "risn-v1.0"
+  },
+  "garments": [
+    {
+      "name": "git_upgrade_test_masterpiece",
+      "type": "couture_gown",
+      "materials": [
+        "digital_silk",
+        "quantum_thread"
+      ],
+      "colors": [
+        "holographic",
+        "iridescent"
+      ],
+      "elements": [
+        "architectural_draping",
+        "kinetic_details"
+      ]
+    }
+  ],
+  "accessories": [
+    {
+      "name": "git_upgrade_test_headpiece",
+      "type": "sculptural_headwear",
+      "materials": [
+        "resin",
+        "led_elements"
+      ],
+      "colors": [
+        "metallic",
+        "transparent"
+      ]
+    }
+  ]
+}

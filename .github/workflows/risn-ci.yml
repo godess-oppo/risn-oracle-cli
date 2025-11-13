@@ -1,0 +1,67 @@
+name: RISN CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * 0'
+
+env:
+  NODE_VERSION: '18'
+  PYTHON_VERSION: '3.9'
+
+jobs:
+  test:
+    name: Test Suite
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: |
+        pip install requests pillow jq
+        npm install -g jq
+
+    - name: Run basic tests
+      run: |
+        chmod +x bin/risn scripts/test-basic.sh
+        ./scripts/test-basic.sh
+
+    - name: Test CLI functionality
+      run: |
+        ./bin/risn --version
+        ./bin/risn --help
+        ./bin/risn ops status --dry-run
+        ./bin/risn design generate --preset minimalist --product ci-test --variants 1 --dry-run
+        ./bin/risn analytics run --forecast 7 --dry-run
+
+  security:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Run SAST scan
+      uses: github/codeql-action/analyze@v3
+
+    - name: Secret scanning
+      uses: gitleaks/gitleaks-action@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

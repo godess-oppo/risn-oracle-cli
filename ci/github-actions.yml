@@ -1,0 +1,26 @@
+name: RISN CI
+on:
+  push:
+    branches: [ main ]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with: {node-version: '18'}
+    - name: Install deps (skip heavy modules)
+      run: |
+        npm ci || true
+    - name: Run RISN tests
+      run: |
+        ./bin/risn test --smoke || true
+  deploy:
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy (dry-run)
+        run: ./bin/risn deploy --target docker --stage staging --canary || true

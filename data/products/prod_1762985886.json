@@ -1,0 +1,13 @@
+{
+  "product_id": "prod_1762985886",
+  "designs": [
+    "designs/hydrogen-test-minimalist-0.png",
+    "designs/t-shirt-cotton-summer-0.png"
+  ],
+  "metadata": {
+    "collection": "mixed",
+    "price": 39.99
+  },
+  "status": "created",
+  "timestamp": "2025-11-12T22:18:06+00:00"
+}

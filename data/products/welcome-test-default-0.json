@@ -1,0 +1,9 @@
+{
+  "product_id": "welcome-test-default-0",
+  "name": "System Test Product",
+  "price": 49.99,
+  "designs": ["designs/welcome-test-default-0.png"],
+  "status": "ai_generated",
+  "ai_provider": "google",
+  "test_timestamp": "2025-11-12T22:26:43+00:00"
+}

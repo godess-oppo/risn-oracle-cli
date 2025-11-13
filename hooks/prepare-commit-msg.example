@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Example prepare-commit-msg hook that appends AICM metadata if present
+COMMIT_FILE=$1
+if [ -f ".git/risn_aicm_msg" ]; then
+  cat .git/risn_aicm_msg >> "$COMMIT_FILE"
+fi

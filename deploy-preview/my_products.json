@@ -1,0 +1,8 @@
+[
+  {
+    "name": "Test Jacket",
+    "description": "My custom design", 
+    "aesthetics": ["minimalist", "tech"],
+    "price": 199.99
+  }
+]

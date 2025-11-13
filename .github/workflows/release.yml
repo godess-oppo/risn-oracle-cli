@@ -1,0 +1,51 @@
+name: Release RISN CLI
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: pip install requests pillow
+
+    - name: Build package
+      run: |
+        mkdir -p dist
+        # Create install script
+        cat > dist/install-risn.sh << 'SCRIPT'
+        #!/bin/bash
+        echo "🚀 Installing RISN CLI..."
+        curl -s https://raw.githubusercontent.com/godess-oppo/risn-cli/main/scripts/install.sh | bash
+        SCRIPT
+        chmod +x dist/install-risn.sh
+        
+        # Create package
+        tar -czf dist/risn-cli-${{ github.ref_name }}.tar.gz \
+          --exclude='.git' \
+          --exclude='node_modules' \
+          --exclude='.github' \
+          .
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          dist/risn-cli-*.tar.gz
+          dist/install-risn.sh
+        generate_release_notes: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

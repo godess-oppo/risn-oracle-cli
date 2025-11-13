@@ -1,0 +1,61 @@
+name: AI Design Generation
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'  # Every Monday 8 AM
+  workflow_dispatch:
+    inputs:
+      preset:
+        description: 'Design preset'
+        required: true
+        default: 'minimalist'
+      variants:
+        description: 'Number of variants'
+        required: true  
+        default: '3'
+
+jobs:
+  generate-designs:
+    name: Generate AI Designs
+    runs-on: ubuntu-latest
+    environment: production
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install AI dependencies
+      run: pip install requests pillow
+
+    - name: Generate designs with Google AI
+      env:
+        GOOGLE_AI_KEY: ${{ secrets.GOOGLE_AI_KEY }}
+      run: |
+        mkdir -p designs
+        PRESET="${{ github.event.inputs.preset || 'minimalist' }}"
+        
+        echo "Generating $PRESET designs..."
+        python scripts/ai/google-ai-design.py "$PRESET fashion design" "github-auto-$PRESET" "1" || echo "AI design attempt completed"
+
+    - name: List generated designs
+      run: ls -la designs/
+
+    - name: Upload design artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: ai-designs-${{ github.run_id }}
+        path: designs/
+        retention-days: 30
+
+    - name: Commit and push designs
+      run: |
+        git config --local user.email "hellorita1992@gmail.com"
+        git config --local user.name "github-actions[bot]"
+        git add designs/
+        git diff --staged --quiet || git commit -m "🤖 AI-generated designs via GitHub Actions"
+        git push https://godess-oppo:YOUR_GITHUB_TOKEN

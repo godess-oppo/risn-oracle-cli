@@ -1,0 +1,4 @@
+{
+  "template":"Marketing Agent: write 3 email subject lines, 2 social captions, 1 short-video script, with CTAs and tags.",
+  "checks":["safety","no-spam-phrases"]
+}

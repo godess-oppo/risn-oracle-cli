@@ -1,0 +1,4 @@
+{
+  "template":"DevOps Agent: assess service health, propose safe remediation with reversible steps, prefer restart over delete.",
+  "checks":["safe-rollback","no-destructive-auto"]
+}

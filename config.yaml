@@ -1,0 +1,14 @@
+brand:
+  name: "CYBER COLLECTIVE"
+  watermark: "assets/watermark.png"
+  default_price: 129.99
+
+ai:
+  model: "stable-diffusion-xl"
+  style_preset: "streetwear"
+  negative_prompt: "ugly, boring, basic"
+
+deployment:
+  default_target: "vercel"
+  auto_social_post: true
+  notify_email: "designer@yourbrand.com"

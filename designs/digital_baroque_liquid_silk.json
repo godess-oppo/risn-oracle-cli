@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "id": "design_1762998517",
+    "theme": "digital_baroque",
+    "style": "liquid_silk",
+    "created": "2025-11-13T09:48:37.615655",
+    "version": "risn-v1.0"
+  },
+  "garments": [
+    {
+      "name": "digital_baroque_masterpiece",
+      "type": "couture_gown",
+      "materials": [
+        "digital_silk",
+        "quantum_thread"
+      ],
+      "colors": [
+        "holographic",
+        "iridescent"
+      ],
+      "elements": [
+        "architectural_draping",
+        "kinetic_details"
+      ]
+    }
+  ],
+  "accessories": [
+    {
+      "name": "digital_baroque_headpiece",
+      "type": "sculptural_headwear",
+      "materials": [
+        "resin",
+        "led_elements"
+      ],
+      "colors": [
+        "metallic",
+        "transparent"
+      ]
+    }
+  ]
+}

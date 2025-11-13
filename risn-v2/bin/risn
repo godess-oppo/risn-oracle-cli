@@ -1,0 +1,103 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+
+RISN_HOME="$HOME/risn-v2"
+BIN_PATH="$RISN_HOME/bin"
+AGENTS_DIR="$RISN_HOME/agents"
+PLUGINS_DIR="$RISN_HOME/plugins"
+ACTIONS_DIR="$RISN_HOME/actions"
+AUDIT_LOG="$RISN_HOME/audit.log"
+MEMORY_DB="$RISN_HOME/ai_memory.json"
+VENV="$RISN_HOME/venv"
+PY="$VENV/bin/python3"
+
+# load env
+if [[ -f "$RISN_HOME/.env" ]]; then
+  set -a
+  source "$RISN_HOME/.env"
+  set +a
+fi
+
+function log() { echo "[RISN v2] $1"; echo "{\"time\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",\"msg\":\"$1\"}" >> "$AUDIT_LOG"; }
+
+DRY_RUN=false
+if [[ "${RISN_DRY_RUN:-}" == "true" ]]; then DRY_RUN=true; fi
+
+# ------------------------
+# Plugin Auto-Registration
+# ------------------------
+function register_plugins() {
+  for plugin in "$PLUGINS_DIR"/*; do
+    [[ -f "$plugin"/manifest.yaml ]] && echo "[PLUGIN] registering $(basename $plugin)"
+  done
+}
+
+# ------------------------
+# AI Memory Hook
+# ------------------------
+function remember() {
+  local key="$1"
+  local value="$2"
+  python3 - <<PY
+import json, os
+db="$MEMORY_DB"
+mem=json.load(open(db)) if os.path.exists(db) else {}
+mem["$key"] = "$value"
+json.dump(mem, open(db,"w"), indent=2)
+PY
+}
+
+# ------------------------
+# Orchestrator Layer
+# ------------------------
+function orchestrate() {
+  log "✨ Orchestrator awakens — weaving processes like a symphony..."
+  "$PY" "$AGENTS_DIR/agent_atelier.py" --breathe &
+  "$PY" "$AGENTS_DIR/agent_design.py" --product "auto" --variants 1
+  "$PY" "$AGENTS_DIR/agent_product.py" --from "auto.png" --meta '{"title":"AutoGarment"}'
+  "$PY" "$AGENTS_DIR/agent_marketing.py" --type "social" --product "AutoGarment"
+}
+
+# ------------------------
+# CLI Commands
+# ------------------------
+CMD="${1:-}"
+shift || true
+case "$CMD" in
+  daemon) ACTION="${1:-}"
+    case "$ACTION" in
+      start)
+        log "RISN v2 daemon starting — atelier rises..."
+        nohup "$PY" "$AGENTS_DIR/orchestrator.py" > "$RISN_HOME/risn-daemon.log" 2>&1 &
+        echo $! > "$RISN_HOME/risn-daemon.pid"
+        log "Daemon alive (pid $(cat "$RISN_HOME/risn-daemon.pid"))"
+        ;;
+      stop)
+        kill "$(cat "$RISN_HOME/risn-daemon.pid")" || true
+        rm -f "$RISN_HOME/risn-daemon.pid"
+        log "Daemon sleeps"
+        ;;
+      status)
+        [[ -f "$RISN_HOME/risn-daemon.pid" ]] && echo "Daemon running (pid $(cat "$RISN_HOME/risn-daemon.pid"))" || echo "Daemon not alive"
+        ;;
+    esac
+    ;;
+  agent)
+    ROLE="${1:-}"
+    [[ -z "$ROLE" ]] && { log "Agent role missing"; exit 1; }
+    "$PY" "$AGENTS_DIR/agent_${ROLE}.py" &
+    ;;
+  register)
+    register_plugins
+    ;;
+  memory)
+    remember "$1" "$2"
+    ;;
+  orchestrate)
+    orchestrate
+    ;;
+  *)
+    log "RISN v2 CLI: available commands: daemon|agent|register|memory|orchestrate"
+    ;;
+esac

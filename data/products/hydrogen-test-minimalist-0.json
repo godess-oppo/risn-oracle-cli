@@ -1,0 +1,14 @@
+{
+  "product_id": "hydrogen-test-minimalist-0",
+  "name": "hydrogen test minimalist 0",
+  "description": "AI-generated fashion design",
+  "price": 29.99,
+  "category": "clothing", 
+  "designs": ["designs/hydrogen-test-minimalist-0.png"],
+  "status": "active",
+  "created_at": "2025-11-12T22:17:20+00:00",
+  "metadata": {
+    "style": "generated",
+    "risn_created": true
+  }
+}

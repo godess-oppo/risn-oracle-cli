@@ -1,0 +1,4 @@
+{
+  "template":"Audit: run bias/toxicity checks using open-source classifiers; produce short human-readable report.",
+  "tools":["detector-stub"]
+}

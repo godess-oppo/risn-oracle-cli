@@ -1,0 +1,5 @@
+{
+  "auto_publish_allowed": false,
+  "restricted_actions": ["db-drop","force-migrate","public-deploy"],
+  "require_policy_accept_env": "RISN_POLICY_ACCEPT"
+}
