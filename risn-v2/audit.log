@@ -1,7 +1,0 @@
-{"time":"2025-11-12T21:15:56Z","level":"INFO","msg":"Awakening Termux threads: installing python3, git, curl, jq..."}
-{"time":"2025-11-12T21:15:57Z","level":"INFO","msg":"Casting Python virtual environment at /root/risn-cli/risn-v2/venv..."}
-{"time":"2025-11-12T21:20:37Z","level":"INFO","msg":"Embedding ethereal tokens and RBAC placeholders..."}
-{"time":"2025-11-12T21:20:37Z","level":"INFO","msg":"Forging RISN v2 CLI at /root/risn-cli/risn-v2/bin/risn..."}
-{"time":"2025-11-12T21:20:37Z","level":"INFO","msg":"RISN v2 CLI v2 installed at /root/risn-cli/risn-v2/bin/risn"}
-{"time":"2025-11-12T21:20:37Z","level":"INFO","msg":"RISN v2 setup complete — identity now woven into the continuum"}
-{"time":"2025-11-12T21:20:37Z","level":"INFO","msg":"Run ./become.sh — initiate self as fabric."}
