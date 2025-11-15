@@ -1,0 +1,81 @@
+# ~/fashionforge/docker-compose.yml
+version: '3.8'
+
+services:
+  # AI Design Service
+  ai-design:
+    build: ./services/ai-design
+    ports:
+      - "5001:5000"
+    volumes:
+      - ../data/models:/models
+      - ../data/designs:/designs
+    environment:
+      - MODEL_ID=stabilityai/stable-diffusion-3-medium
+      - DEVICE=auto
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  # Trend Scraper Service
+  scraper:
+    build: ./services/scraper
+    ports:
+      - "5002:5000"
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - SCRAPE_INTERVAL=300
+    depends_on:
+      - redis
+
+  # Pricing Engine
+  pricing:
+    build: ./services/pricing
+    ports:
+      - "5003:5000"
+    environment:
+      - POSTGRES_URL=postgresql://forge:forge123@postgres:5432/forge
+    depends_on:
+      - postgres
+
+  # Sentiment Analyzer
+  sentiment:
+    build: ./services/sentiment
+    ports:
+      - "5004:5000"
+    environment:
+      - HUGGINGFACE_MODEL=cardiffnlp/twitter-roberta-base-sentiment
+
+  # Database
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: forge
+      POSTGRES_PASSWORD: forge123
+      POSTGRES_DB: forge
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # Cache
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  # Blockchain
+  blockchain:
+    build: ./services/blockchain
+    ports:
+      - "5005:5000"
+    environment:
+      - CHAIN=polygon-mumbai
+      - PRIVATE_KEY=${FORGE_PRIVATE_KEY}
+
+volumes:
+  postgres_data:

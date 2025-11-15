@@ -1,0 +1,15 @@
+[package]
+name = "risn-eco-cli"
+version = "2.0.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+reqwest = { version = "0.11", features = ["json"] }
+clap = { version = "4.0", features = ["derive"] }
+
+[[bin]]
+name = "risn"
+path = "src/main.rs"

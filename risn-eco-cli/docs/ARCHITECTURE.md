@@ -1,0 +1,1 @@
+# Placeholder: ./docs/ARCHITECTURE.md

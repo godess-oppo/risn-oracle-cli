@@ -1,0 +1,3 @@
+[console_scripts]
+fashionforge = forge_cli.cli:main
+forge = forge_cli.cli:main

@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: fashionforge-cli
+Version: 0.1.0
+Summary: AI-Native Fashion POD Terminal OS
+Author: FashionForge Team
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1.7
+Requires-Dist: rich>=13.7.0
+
+# FashionForge CLI
+AI-Native Fashion POD Terminal OS

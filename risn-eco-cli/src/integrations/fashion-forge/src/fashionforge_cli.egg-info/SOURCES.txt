@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+src/fashionforge_cli.egg-info/PKG-INFO
+src/fashionforge_cli.egg-info/SOURCES.txt
+src/fashionforge_cli.egg-info/dependency_links.txt
+src/fashionforge_cli.egg-info/entry_points.txt
+src/fashionforge_cli.egg-info/requires.txt
+src/fashionforge_cli.egg-info/top_level.txt
+src/forge_cli/__init__.py
+src/forge_cli/cli.py
+src/forge_cli/ai/generator.py
+src/forge_cli/automation/publisher.py
+src/forge_cli/commerce/pricing.py
+src/forge_cli/ui/dashboard.py
